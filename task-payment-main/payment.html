@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+  <form action="" class="row form_payment">
+
+    <div class="col-12">
+      <h3 class="h-pa">Payment System</h3>
+    <div class="public_payment">
+      <label>Select Payment Method</label><br>
+      <select id="paymentMethod" required class="size_pa">
+        <option value="">---- Select ----</option>
+        <option value="card">Card Payment</option>
+        <option value="cashback">Cash Back</option>
+      </select><br>
+      <button type="submit" id="payment_submit" onfocus="submit_method()">Submit</button>
+    </div>
+
+    <div class="card_payment">
+      <label  class="label_payment">Card Number</label>
+      <input type="text" class="size_pa" placeholder="Enter card number" required>
+      <label  class="label_payment">Card Holder Name</label>
+      <input type="text"class="size_pa" placeholder="Enter card holder name" required>
+      <label  class="label_payment">Expiry Date</label>
+      <input type="month" class="size_pa" required>
+      <label class="label_payment">CVV</label>
+      <input type="text" placeholder="Enter CVV" class="size_pa" required>
+    </div>
+
+    <div class="cash_payment">
+      <label class="label_payment">Cash Back Code</label>
+      <input type="text" id="cashbackCode"placeholder="Enter cashback code" class="size_pa" required>
+    </div>
+    <button type="submit" id="payment_confirm" class="co">Confirm</button>
+    </div>
+  </form>
+
+
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="payment.js"></script>
+</body>
+</html>
